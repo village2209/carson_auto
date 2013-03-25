@@ -5,7 +5,7 @@ class CreateCars < ActiveRecord::Migration
       t.string :make
       t.decimal :price
       t.string :image_desc
-      t.binary :image_file
+      t.binary_data :image_file
       t.string :model
       t.integer :year
       t.integer :mileage

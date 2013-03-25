@@ -1,6 +1,13 @@
 CarsonAuto::Application.routes.draw do
+  resources :cars
 
   root to: 'static_pages#home'
+
+  get 'cars/create'
+
+  match '/addcars', to: 'cars#new'
+
+  #match '/cars', to: 'cars#view'
 
   match '/home', to: 'static_pages#home'
 

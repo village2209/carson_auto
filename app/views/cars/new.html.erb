@@ -1,0 +1,39 @@
+<p>
+	<%= form_for(@car) do |f| %>
+	<%= render 'shared/error_messages' %>
+
+		<%= f.label :make %>
+		<%= f.text_field :make %>
+
+		<%= f.label :price %>
+		<%= f.text_field :price %>
+
+		<%= f.label :image_desc %>
+		<%= f.text_field :image_desc %>
+
+		<%= f.label :image_file %>
+		<%= f.file_field :image_file %>
+
+		<%= f.label :model %>
+		<%= f.text_field :model %>
+
+		<%= f.label :year %>
+		<%= f.text_field :year %>
+
+		<%= f.label :mileage %>
+		<%= f.text_field :mileage %>
+
+		<%= f.label :color %>
+		<%= f.text_field :color %>
+
+		<%= f.label :transmission %>
+		<%= f.text_field :transmission %>
+
+		<%= f.label :fueltype %>
+		<%= f.text_field :fueltype %>
+
+		<%= f.submit "Upload car info" %>
+
+
+	<% end %>
+</p>
