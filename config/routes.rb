@@ -1,5 +1,6 @@
 CarsonAuto::Application.routes.draw do
   resources :cars
+  resources :users
 
   root to: 'static_pages#home'
 
@@ -14,6 +15,8 @@ CarsonAuto::Application.routes.draw do
   match '/contact', to: 'static_pages#contact'
 
   match '/help', to: 'static_pages#help'
+
+  match '/signup', to: 'users#new'
 
 
   # The priority is based upon order of creation:
