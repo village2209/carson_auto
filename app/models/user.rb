@@ -18,9 +18,15 @@ class User < ActiveRecord::Base
 	has_many :orders
 	has_many :invoices
 	belongs_to :ship_address
-	has_secure_password
+	
+  attr_accessible :address, :cell_number, :country, :email, :name, :password, :surname, :password_confirmation
 
-  	attr_accessible :address, :cell_number, :country, :email, :name, :password, :surname, :password_confirmation
+  has_secure_password
+
+  before_save { |user| user.email = email.downcase }
+  before_save :create_remember_token
+
+  	
 
   	before_save { |user| user.email = email.downcase }
 
@@ -31,4 +37,9 @@ class User < ActiveRecord::Base
   	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   	validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }, 
   	uniqueness: {case_sensitive: false}
+  private
+  def create_remember_token
+  self.remember_token = SecureRandom.urlsafe_base64
+  end
+    
 end
