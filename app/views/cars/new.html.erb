@@ -1,5 +1,5 @@
 <p>
-	<%= form_for(@car) do |f| %>
+	<%= form_for(@car, :html => {:multipart => true}) do |f| %>
 	<%= render 'shared/error_messages' %>
 
 		<%= f.label :make %>
@@ -12,7 +12,7 @@
 		<%= f.text_field :image_desc %>
 
 		<%= f.label :image_file %>
-		<%= f.file_field :image_file %>
+		<%= f.file_field :image_desc %>
 
 		<%= f.label :model %>
 		<%= f.text_field :model %>

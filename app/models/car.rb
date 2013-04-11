@@ -21,5 +21,13 @@
 class Car < ActiveRecord::Base
   belongs_to :admin
   belongs_to :invoice_line
+  mount_uploader :image_desc, ImageUploader
+
+
+  validates :price, presence: true
+  validates :make, presence: true 
+  validates :year, presence: true, length: {maximum: 4, minimum: 4}
+
+
   attr_accessible :color, :fueltype, :image_desc, :image_file, :make, :mileage, :model, :price, :transmission, :year
 end
