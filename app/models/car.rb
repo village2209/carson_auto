@@ -22,6 +22,7 @@ class Car < ActiveRecord::Base
   belongs_to :admin
   belongs_to :invoice_line
   mount_uploader :image_desc, ImageUploader
+  
 
 
   validates :price, presence: true
