@@ -7,8 +7,6 @@ CarsonAuto::Application.routes.draw do
 
   match '/addcars', to: 'cars#new'
 
-  #match '/cars', to: 'cars#view'
-
   match '/home', to: 'static_pages#home'
 
   match '/about', to: 'static_pages#about'
