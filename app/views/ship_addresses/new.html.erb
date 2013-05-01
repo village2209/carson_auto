@@ -1,0 +1,17 @@
+<% provide(:title, 'Addresses') %>
+<h3>Your profile </h3>
+		<div class="row">
+			<div class="span6 offset3">
+				<%= form_for(@ship_address) do |f| %>
+				<%= render 'shared/error_messages', object: f.object %>
+				<%= f.label :region %>
+				<%= f.text_field :region %>
+				<%= f.label :country %>
+				<%= f.text_field :country %>
+				<%= f.label :address %>
+				<%= f.text_field :address %>
+				<%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+				<% end %>
+				
+			</div>
+		</div>

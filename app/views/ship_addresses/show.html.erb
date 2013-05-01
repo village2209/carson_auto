@@ -1,0 +1,23 @@
+<%= render 'shared/side_bar' %>
+
+	<div class="center row">
+		<h4>Customer Address</h4>
+		<aside class="span4 ">
+			<table class="table">
+				<tr>
+					<td>Address:</td><td><%= @ship_address.address %></td>
+				</tr>
+				<tr>
+					<td>Country:</td><td><%= @ship_address.country %></td>
+				</tr>
+				<tr>
+					<td>Country:</td><td><%= @ship_address.region %></td>
+				</tr>
+			</table>
+			<%= link_to 'Edit', edit_address_path , class: "label label-info" %><%= link_to 'Delete', ship_address, method: :delete,
+		data: { confirm: "Are you sure?" }, class: "label label-important" %>
+
+		</aside>			
+	</div>
+		
+</div>

@@ -1,11 +1,21 @@
 CarsonAuto::Application.routes.draw do
+  get "card_info/index"
+
+  get "card_info/create"
+
+  get "card_info/destroy"
+
+  get "card_info/edit"
+
+  get "card_info/update"
+
   resources :cars
   resources :users
+  resources :ship_addresses
   resources :sessions, only: [:new, :create, :destroy]
 
   root to: 'static_pages#home'
 
-  get 'cars/create'
 
   match '/addcars', to: 'cars#new'
   
@@ -17,6 +27,18 @@ CarsonAuto::Application.routes.draw do
   match '/signup', to: 'users#new'
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
+
+  match '/address', to: 'ship_addresses#new'
+  match '/show_address', to: 'ship_addresses#show'
+  match '/edit_address', to: 'ship_addresses#edit'
+  match '/delete_address', to: 'ship_addresses#destroy'
+
+  match '/card_info', to: 'card_info#show'
+  match '/edit_card_info', to: 'card_info#edit'
+  match '/create_card_info', to: 'card_info#create'
+
+
+ 
 
 
   # The priority is based upon order of creation:

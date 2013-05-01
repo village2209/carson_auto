@@ -1,11 +1,25 @@
+<%= render 'shared/side_bar' %>
+		
+	<div class="center row">
+		<h4>Customer Information</h4>
+		<aside class="span4 ">
+			<table class="table">
+				<tr>
+					<td>Name:</td><td><%= @user.name %></td>
+				</tr>
+				<tr>
+					<td>Surname:</td><td><%= @user.surname %></td>
+				</tr>
+				<tr>
+					<td>E-mail:</td><td><%= @user.email %></td>
+				</tr>
+			</table>
 
-<div class="row">
-	<aside>
-		<section>
-			<h1>
-				<%= @user.name %>
-				<%= @user.surname %>
-			</h1>
-		</section>
-	</aside> 
+		</aside>			
+	</div>
+		
 </div>
+
+	
+	
+
