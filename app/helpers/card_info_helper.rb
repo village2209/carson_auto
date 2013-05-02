@@ -1,2 +1,0 @@
-module CardInfoHelper
-end
