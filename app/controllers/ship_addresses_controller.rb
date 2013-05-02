@@ -9,7 +9,8 @@ class ShipAddressesController < ApplicationController
 	end
 
 	def show
-		@ship_address = current_user.ship_addresses.find_by_id(params[:id])
+		@ship_address = current_user.ship_addresses.find(current_user)
+		rescue ActiveRecord::RecordNotFound
 				
 	end
 
@@ -25,13 +26,14 @@ class ShipAddressesController < ApplicationController
 	end
 
 	def edit
-		@ship_address = ShipAddress.find(current_user)
+		@ship_address = ShipAddress.find_by_user_id(current_user)
+		rescue ActiveRecord::RecordNotFound
 	end
 
 	def update
-		@ship_address = ShipAddress.find(current_user)
+		@ship_address = ShipAddress.find_by_user_id(current_user)
 	    if @ship_address.update_attributes(params[:ship_address])
-	      flash[:success] = "Profile updated"
+	      flash[:success] = "Address information updated"
 	      redirect_to(current_user)
 	      
 	    else
