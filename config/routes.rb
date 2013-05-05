@@ -29,7 +29,7 @@ CarsonAuto::Application.routes.draw do
 
   match '/card_type', to: 'card_types#show'
   match '/edit_card_type', to: 'card_types#edit'
-  match '/create_card_type', to: 'card_types#create'
+  match '/create_card_type', to: 'card_types#new'
 
 
  

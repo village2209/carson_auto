@@ -6,9 +6,9 @@
 				<% if ship_address %>
 				<li><%= link_to 'Shipping Address', ship_address_path %></li>
 				<% else %>
-				<li><%= link_to 'Add Address', address_path %></li>
+				<li><%= link_to 'Add Shipping Address', address_path %></li>
 				<% end %>
-				<li><%= link_to 'Card Information', card_type_path%></li>
+				<li><%= link_to 'Card Information', create_card_type_path%></li>
 				<li><%= link_to 'Order History', '#'%></li>
 			</ul>
 		</div>

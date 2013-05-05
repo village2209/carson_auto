@@ -12,5 +12,6 @@
 
 class CardType < ActiveRecord::Base
   has_many :payments
+  belongs_to :user
   attr_accessible :description, :name, :valid
 end

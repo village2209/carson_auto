@@ -10,8 +10,9 @@ class CardTypesController < ApplicationController
   end
 
   def create
+    @card_type = CardType.new(params[:card_type])
     if @card_type.save
-    flash[:success] = "Address added!"
+    flash[:success] = "Card information added!"
     redirect_to(current_user)
     else
     @feed_items = []

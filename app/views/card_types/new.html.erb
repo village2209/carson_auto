@@ -1,2 +1,16 @@
-<h1>CardTypes#new</h1>
-<p>Find me in app/views/card_types/new.html.erb</p>
+
+
+	<h4>Add Credit Card information</h4>
+<div class="row">
+	<div class="span6 offset3">
+		<%= form_for(@card_type) do |f|%>
+		<%= render 'shared/error_messages', object: f.object%>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+		<%= f.label :description %>
+		<%= f.text_field :description %>
+		<%= f.submit "Save Card info" ,class: "btn btn-large btn-primary"%>
+		<% end %>
+	</div>
+
+</div>
