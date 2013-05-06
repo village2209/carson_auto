@@ -8,7 +8,11 @@
 				<% else %>
 				<li><%= link_to 'Add Shipping Address', address_path %></li>
 				<% end %>
-				<li><%= link_to 'Card Information', create_card_type_path%></li>
+				<% if credit_card %>
+				<li><%= link_to 'Card Information', credit_card_path %></li>
+				<% else %>
+				<li><%= link_to 'Add Card information', new_card_path %></li>
+				<% end %>
 				<li><%= link_to 'Order History', '#'%></li>
 			</ul>
 		</div>

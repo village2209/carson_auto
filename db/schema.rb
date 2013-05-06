@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130505174159) do
+ActiveRecord::Schema.define(:version => 20130506124601) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -65,17 +65,6 @@ ActiveRecord::Schema.define(:version => 20130505174159) do
 
   add_index "car_images", ["car_id"], :name => "index_car_images_on_car_id"
 
-  create_table "card_types", :force => true do |t|
-    t.integer  "payment_id"
-    t.string   "name"
-    t.string   "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-    t.string   "card_number"
-  end
-
-  add_index "card_types", ["payment_id"], :name => "index_card_types_on_payment_id"
-
   create_table "cars", :force => true do |t|
     t.integer  "admin_id"
     t.string   "make"
@@ -93,6 +82,19 @@ ActiveRecord::Schema.define(:version => 20130505174159) do
   end
 
   add_index "cars", ["admin_id"], :name => "index_cars_on_admin_id"
+
+  create_table "credit_cards", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "card_type"
+    t.string   "card_number"
+    t.string   "card_security_code"
+    t.string   "user_id_number"
+    t.string   "holder_name"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  add_index "credit_cards", ["user_id"], :name => "index_credit_cards_on_user_id"
 
   create_table "invoice_lines", :force => true do |t|
     t.integer  "car_id"
@@ -135,8 +137,6 @@ ActiveRecord::Schema.define(:version => 20130505174159) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
   end
-
-  add_index "payments", ["card_type_id"], :name => "index_payments_on_card_type_id"
 
   create_table "ship_addresses", :force => true do |t|
     t.integer  "user_id"

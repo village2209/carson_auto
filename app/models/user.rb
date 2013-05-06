@@ -19,7 +19,7 @@
 class User < ActiveRecord::Base
 	has_many :orders
 	has_many :invoices
-  has_one :card_type
+  has_many :credit_cards
 	
   has_many :ship_addresses, dependent: :destroy
 

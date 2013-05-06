@@ -1,0 +1,25 @@
+<%= render 'shared/side_bar' %>
+
+<% @user ||=  current_user %>
+<div class="center row">
+	<h4>Credit Card Information</h4>
+	<aside class="span4">
+		<table class="table">
+			<tr>
+				<% CreditCard.find_each(:conditions => "user_id = #{@user.id}") do |credit| %>
+				<td>Card type: </td><td><%= credit.card_type %></td>
+			</tr>
+			<tr>
+				<td>Card holder:</td><td><%= credit.holder_name %></td>
+			</tr>
+			<tr >
+				<td colspan="2"><%= link_to "Add new credit card", new_credit_card_path %>
+		<%= link_to "Edit", '#', class: "label label-info" %><%= link_to "Delete", @credit_card, method: :delete,
+		data: { confirm: "Are you sure?" }, class: "label label-important" %></td>
+			</tr>
+			<% end %> 
+		</table>
+
+		
+	</aside>
+</div>

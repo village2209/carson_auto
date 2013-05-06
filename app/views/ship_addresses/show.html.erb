@@ -1,22 +1,30 @@
 <%= render 'shared/side_bar' %>
-
+	
+	<% @user ||= current_user %>
 	<div class="center row">
 		<h4>Customer Address</h4>
 		<aside class="span4 ">
 			<table class="table">
+				<% ShipAddress.find_each(:conditions => "user_id = #{@user.id}") do |ship| %>
 				<tr>
-					<td>Address:</td><td><%= @ship_address.address %></td>
+					
+					<td>Address:</td><td><%= ship.address %></td>
 				</tr>
 				<tr>
-					<td>Country:</td><td><%= @ship_address.country %></td>
+					<td>Country:</td><td><%= ship.country %></td>
 				</tr>
 				<tr>
-					<td>Region:</td><td><%= @ship_address.region %></td>
+					<td>Region:</td><td><%= ship.region %></td>
 				</tr>
+				<tr>
+					<td colspan="2"><%= link_to 'Edit', edit_address_path , class: "label label-info" %><%= link_to 'Delete', @ship_address, method: :delete,
+		data: { confirm: "Are you sure?" }, class: "label label-important" %></td>
+				</tr>
+				<% end %>
 			</table>
-			<%= link_to 'Edit', edit_address_path , class: "label label-info" %><%= link_to 'Delete', @ship_address, method: :delete,
-		data: { confirm: "Are you sure?" }, class: "label label-important" %>
+			
 
+<%= link_to "Add new ship address", address_path %>
 		</aside>			
 	</div>
 		
