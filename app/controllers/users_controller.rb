@@ -19,6 +19,7 @@ class UsersController < ApplicationController
 		@user = User.new(params[:user])
 		
 		if @user.save
+			UserMailer.registration_confirmation(@user).deliver
 			sign_in @user
 			redirect_to(root_path)
 			flash[:success] = "Welcome to Carson App"
