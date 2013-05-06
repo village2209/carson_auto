@@ -6,12 +6,13 @@
 #  payment_id  :integer
 #  name        :string(255)
 #  description :string(255)
-#  valid       :string(255)
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  card_number :string(255)
 #
 
 class CardType < ActiveRecord::Base
-  has_many :payments
-  attr_accessible :description, :name, :valid
+  belongs_to :user
+  belongs_to :payment
+  attr_accessible :card_number, :card_type, :holder_name, :security_code, :user_id_number
 end
