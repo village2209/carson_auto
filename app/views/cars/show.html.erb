@@ -4,8 +4,7 @@
 		<%= @car.model %>
 		<%= @car.year %>
 		<%= @car.price %>
-		<%= image_tag @car.image_desc_url(:thumb).to_s %>
-		<%= @car.fueltype %>
-		<%= @car.admin_id %>
+		<%= image_tag @car.image_url(:thumb).to_s %>
+		<%= @car.fuel_type %>
 	</h1>
 </div>

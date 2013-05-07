@@ -3,8 +3,8 @@
 <p>
 	
 	<% Car.all.each do |car| %>
-	<div>
-  		<%= image_tag car.image_desc_url(:thumb).to_s %><br>
+	<div class="well">
+  		<%= image_tag car.image_url(:thumb).to_s, class: "thumbnail" %><br>
   		<%= car.make %><br>
   		<%= car.year %><br>
   		<%= car.price %><br>

@@ -5,6 +5,8 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'rmagick'
 gem 'carrierwave'
 gem 'bootstrap-sass', '~> 2.3.1.0'
+gem 'activeadmin'
+gem 'country-select'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

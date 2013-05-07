@@ -1,5 +1,9 @@
 CarsonAuto::Application.routes.draw do
   
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
   resources :cars
   resources :users
   resources :ship_addresses
