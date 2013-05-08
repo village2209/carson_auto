@@ -3,7 +3,7 @@
 <div class="row">
 	
 	<div class="span6 offset3">
-		<%= form_for(@credit_card) do |f| %>
+		<%= form_for(@payment_card) do |f| %>
 		<%= render 'shared/error_messages', object: f.object %> 
 		<%= f.label :card_type %>
 		<%= f.text_field :card_type %>

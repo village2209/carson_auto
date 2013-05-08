@@ -6,7 +6,7 @@
 	<aside class="span4">
 		<table class="table">
 			<tr>
-				<% CreditCard.find_each(:conditions => "user_id = #{@user.id}") do |credit| %>
+				<% PaymentCard.find_each(:conditions => "user_id = #{@user.id}") do |credit| %>
 				<td>Card type: </td><td><%= credit.card_type %></td>
 			</tr>
 			<tr>
@@ -14,7 +14,7 @@
 			</tr>
 			<tr >
 				<td colspan="2"><%= link_to "Add new credit card", new_credit_card_path %>
-		<%= link_to "Edit", '#', class: "label label-info" %><%= link_to "Delete", @credit_card, method: :delete,
+		<%= link_to "Edit", '#', class: "label label-info" %><%= link_to "Delete", @payment_card, method: :delete,
 		data: { confirm: "Are you sure?" }, class: "label label-important" %></td>
 			</tr>
 			<% end %> 

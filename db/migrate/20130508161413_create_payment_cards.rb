@@ -1,6 +1,6 @@
-class CreateCreditCards < ActiveRecord::Migration
+class CreatePaymentCards < ActiveRecord::Migration
   def change
-    create_table :credit_cards do |t|
+    create_table :payment_cards do |t|
       t.belongs_to :user
       t.string :card_type
       t.string :card_number
@@ -10,6 +10,6 @@ class CreateCreditCards < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :credit_cards, :user_id
+    add_index :payment_cards, :user_id
   end
 end

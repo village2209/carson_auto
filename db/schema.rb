@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130507191711) do
+ActiveRecord::Schema.define(:version => 20130508173812) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -135,12 +135,26 @@ ActiveRecord::Schema.define(:version => 20130507191711) do
   add_index "orders", ["payment_id"], :name => "index_orders_on_payment_id"
   add_index "orders", ["user_id"], :name => "index_orders_on_user_id"
 
-  create_table "payments", :force => true do |t|
-    t.integer  "card_type_id"
+  create_table "payment_cards", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "card_type"
     t.string   "card_number"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.string   "card_security_code"
+    t.string   "user_id_number"
+    t.string   "holder_name"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
+
+  add_index "payment_cards", ["user_id"], :name => "index_payment_cards_on_user_id"
+
+  create_table "payments", :force => true do |t|
+    t.integer  "payment_card_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "payments", ["payment_card_id"], :name => "index_payments_on_payment_card_id"
 
   create_table "ship_addresses", :force => true do |t|
     t.integer  "user_id"
