@@ -19,8 +19,9 @@
 class User < ActiveRecord::Base
 	has_many :orders
 	has_many :invoices
-  has_many :credit_cards
-	
+  has_one :cart
+	has_many :payment_cards
+
   has_many :ship_addresses, dependent: :destroy
 
   attr_accessible :address, :cell_number, :country, :email, :name, :password, :surname, :password_confirmation

@@ -8,6 +8,7 @@
   		<%= car.make %><br>
   		<%= car.year %><br>
   		<%= number_to_currency car.price, :unit => "R" %><br>
+  		<%= link_to 'add to cart', add_cart_item_path(:product => { :product_id => car.id}) %>
   	</div>
 	<% end %>
 

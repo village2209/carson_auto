@@ -7,7 +7,9 @@ CarsonAuto::Application.routes.draw do
   resources :cars
   resources :users
   resources :ship_addresses
-  resources :credit_cards
+  resources :payment_cards
+  resources :carts
+  resources :cart_items, only: [:create, :destroy]
 
   resources :sessions, only: [:new, :create, :destroy]
 
@@ -31,11 +33,17 @@ CarsonAuto::Application.routes.draw do
   match '/edit_address', to: 'ship_addresses#edit'
   match '/delete_address', to: 'ship_addresses#destroy'
 
-  match '/new_card', to: 'credit_cards#new'
-  match '/credit_card', to: 'credit_cards#show'
-  match '/delete_card', to: 'credit_cards#destroy'
+  match '/new_card', to: 'payment_cards#new'
+  match '/credit_card', to: 'payment_cards#show'
+  match '/delete_card', to: 'payment_cards#destroy'
+  
+  match '/add_cart', to: 'carts#create'
 
+  match '/add_cart_item', to: 'cart_items#create'
 
+  match '/show_cart_items', to: 'cart_items#index'
+
+  match '/destroy_cart_item', to: 'cart_items#destroy'
  
 
 
