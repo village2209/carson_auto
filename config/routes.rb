@@ -1,5 +1,7 @@
 CarsonAuto::Application.routes.draw do
   
+  root to: 'static_pages#home'
+  
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -12,9 +14,6 @@ CarsonAuto::Application.routes.draw do
   resources :cart_items, only: [:create, :destroy]
 
   resources :sessions, only: [:new, :create, :destroy]
-
-  root to: 'static_pages#home'
-
 
   match '/addcars', to: 'cars#new'
   
