@@ -46,16 +46,6 @@ ActiveRecord::Schema.define(:version => 20130508173812) do
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
-  create_table "car_images", :force => true do |t|
-    t.integer  "car_id"
-    t.string   "image_desc"
-    t.binary   "image_file"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  add_index "car_images", ["car_id"], :name => "index_car_images_on_car_id"
-
   create_table "cars", :force => true do |t|
     t.string   "make"
     t.decimal  "price"
@@ -86,19 +76,6 @@ ActiveRecord::Schema.define(:version => 20130508173812) do
   end
 
   add_index "carts", ["user_id"], :name => "index_carts_on_user_id"
-
-  create_table "credit_cards", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "card_type"
-    t.string   "card_number"
-    t.string   "card_security_code"
-    t.string   "user_id_number"
-    t.string   "holder_name"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
-  end
-
-  add_index "credit_cards", ["user_id"], :name => "index_credit_cards_on_user_id"
 
   create_table "invoice_lines", :force => true do |t|
     t.integer  "car_id"
