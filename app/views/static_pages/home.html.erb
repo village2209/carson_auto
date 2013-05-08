@@ -7,7 +7,7 @@
   		<%= image_tag car.image_url(:thumb).to_s, class: "thumbnail" %><br>
   		<%= car.make %><br>
   		<%= car.year %><br>
-  		<%= car.price %><br>
+  		<%= number_to_currency car.price, :unit => "R" %><br>
   	</div>
 	<% end %>
 
