@@ -3,6 +3,8 @@ module SessionsHelper
 	def sign_in_(user)
 		cookies.permanent[:remember_token] = user.remember_token
 		self.current_user = user
+		@cart = current_user.build_cart(params[:cart])
+		@cart.save
 	end
 
 	def signed_in?
