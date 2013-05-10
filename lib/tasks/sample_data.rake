@@ -15,16 +15,16 @@ namespace :db do
 		category: "bakkie")
 		
 		10.times do |n|
-			make = "Toyota",
-			price = "35000".to_i,
-			image = "",
-			model = "hilux",
-			year = "2010".to_i,
-			mileage = "3562".to_i,
-			color = "green",
-			transmission = "manual",
-			fuel_type = "petrol",
-			category = "bakkie",
+			make = "Toyota"
+			price = "35000".to_i
+			image = ""
+			model = "hilux"
+			year = "2010".to_i
+			mileage = "3562".to_i
+			color = "green"
+			transmission = "manual"
+			fuel_type = "petrol"
+			category = "bakkie"
 			engine = "2.4"
 
 
@@ -42,16 +42,16 @@ namespace :db do
 		end
 
 		10.times do |n|
-			make = "Isuzu",
-			price = "35000".to_i,
-			image = "",
-			model = "lx",
-			year = "2013".to_i,
-			mileage = "350".to_i,
-			color = "green",
-			transmission = "manual",
-			fuel_type = "Diesel",
-			category = "bakkie",
+			make = "Isuzu"
+			price = "35000".to_i
+			image = ""
+			model = "lx"
+			year = "2013".to_i
+			mileage = "350".to_i
+			color = "green"
+			transmission = "manual"
+			fuel_type = "Diesel"
+			category = "bakkie"
 			engine = "3.0"
 
 
@@ -69,16 +69,16 @@ namespace :db do
 		end
 
 		10.times do |n|
-			make = "Nissan",
-			price = "35000".to_i,
-			image = "",
-			model = "Hardbody",
-			year = "2010".to_i,
-			mileage = "3562".to_i,
-			color = "green",
-			transmission = "manual",
-			fuel_type = "petrol",
-			category = "bakkie",
+			make = "Nissan"
+			price = "35000".to_i
+			image = ""
+			model = "Hardbody"
+			year = "2010".to_i
+			mileage = "3562".to_i
+			color = "green"
+			transmission = "manual"
+			fuel_type = "petrol"
+			category = "bakkie"
 			engine = "3.0"
 
 
@@ -96,16 +96,16 @@ namespace :db do
 		end
 
 		10.times do |n|
-			make = "BMW",
-			price = "35000".to_i,
-			image = "",
-			model = "5 series",
-			year = "2010".to_i,
-			mileage = "3562".to_i,
-			color = "green",
-			transmission = "manual",
-			fuel_type = "petrol",
-			category = "sedan",
+			make = "BMW"
+			price = "35000".to_i
+			image = ""
+			model = "5 series"
+			year = "2010".to_i
+			mileage = "3562".to_i
+			color = "green"
+			transmission = "manual"
+			fuel_type = "petrol"
+			category = "sedan"
 			engine = "3.0"
 
 
@@ -123,16 +123,16 @@ namespace :db do
 		end
 
 		10.times do |n|
-			make = "Toyota",
-			price = "35000".to_i,
-			image = "",
-			model = "landcruiser",
-			year = "2010".to_i,
-			mileage = "3562".to_i,
-			color = "green",
-			transmission = "manual",
-			fuel_type = "petrol",
-			category = "4x4",
+			make = "Toyota"
+			price = "35000".to_i
+			image = ""
+			model = "landcruiser"
+			year = "2010".to_i
+			mileage = "3562".to_i
+			color = "green"
+			transmission = "manual"
+			fuel_type = "petrol"
+			category = "4x4"
 			engine = "4.2"
 
 
@@ -150,16 +150,16 @@ namespace :db do
 		end
 
 		10.times do |n|
-			make = "Toyota",
-			price = "35000".to_i,
-			image = "",
-			model = "corolla",
-			year = "2010".to_i,
-			mileage = "3562".to_i,
-			color = "green",
-			transmission = "manual",
-			fuel_type = "petrol",
-			category = "sedan",
+			make = "Toyota"
+			price = "35000".to_i
+			image = ""
+			model = "corolla"
+			year = "2010".to_i
+			mileage = "3562".to_i
+			color = "green"
+			transmission = "manual"
+			fuel_type = "petrol"
+			category = "sedan"
 			engine = "1.6"
 
 
@@ -177,16 +177,16 @@ namespace :db do
 		end
 
 		10.times do |n|
-			make = "Mercedes-Benz",
-			price = "35000".to_i,
-			image = "",
-			model = "C200 kompressor",
-			year = "2010".to_i,
-			mileage = "3562".to_i,
-			color = "green",
-			transmission = "manual",
-			fuel_type = "petrol",
-			category = "sedan",
+			make = "Mercedes-Benz"
+			price = "35000".to_i
+			image = ""
+			model = "C200 kompressor"
+			year = "2010".to_i
+			mileage = "3562".to_i
+			color = "green"
+			transmission = "manual"
+			fuel_type = "petrol"
+			category = "sedan"
 			engine = "2.4"
 
 
@@ -204,16 +204,16 @@ namespace :db do
 		end
 
 		10.times do |n|
-			make = "VW",
-			price = "35000".to_i,
-			image = "",
-			model = "polo",
-			year = "2010".to_i,
-			mileage = "3562".to_i,
-			color = "green",
-			transmission = "manual",
-			fuel_type = "petrol",
-			category = "sedan",
+			make = "VW"
+			price = "35000".to_i
+			image = ""
+			model = "polo"
+			year = "2010".to_i
+			mileage = "3562".to_i
+			color = "green"
+			transmission = "manual"
+			fuel_type = "petrol"
+			category = "sedan"
 			engine = "1.4"
 
 
@@ -231,16 +231,16 @@ namespace :db do
 		end
 
 		10.times do |n|
-			make = "VW",
-			price = "35000".to_i,
-			image = "",
-			model = "GTI",
-			year = "2010".to_i,
-			mileage = "3562".to_i,
-			color = "green",
-			transmission = "manual",
-			fuel_type = "petrol",
-			category = "sedan",
+			make = "VW"
+			price = "35000".to_i
+			image = ""
+			model = "GTI"
+			year = "2010".to_i
+			mileage = "3562".to_i
+			color = "green"
+			transmission = "manual"
+			fuel_type = "petrol"
+			category = "sedan"
 			engine = "2.4"
 
 
@@ -258,16 +258,16 @@ namespace :db do
 		end
 
 		10.times do |n|
-			make = "Ferrari",
-			price = "35000".to_i,
-			image = "",
-			model = "California",
-			year = "2010".to_i,
-			mileage = "3562".to_i,
-			color = "green",
-			transmission = "manual",
-			fuel_type = "petrol",
-			category = "sports",
+			make = "Ferrari"
+			price = "35000".to_i
+			image = ""
+			model = "California"
+			year = "2010".to_i
+			mileage = "3562".to_i
+			color = "green"
+			transmission = "manual"
+			fuel_type = "petrol"
+			category = "sports"
 			engine = "4.2"
 
 
@@ -285,16 +285,16 @@ namespace :db do
 		end
 
 		10.times do |n|
-			make = "Nissan",
-			price = "35000".to_i,
-			image = "",
-			model = "GTR",
-			year = "2010".to_i,
-			mileage = "3562".to_i,
-			color = "green",
-			transmission = "manual",
-			fuel_type = "petrol",
-			category = "sports",
+			make = "Nissan"
+			price = "35000".to_i
+			image = ""
+			model = "GTR"
+			year = "2010".to_i
+			mileage = "3562".to_i
+			color = "green"
+			transmission = "manual"
+			fuel_type = "petrol"
+			category = "sports"
 			engine = "3.8"
 
 
