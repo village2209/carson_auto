@@ -49,6 +49,8 @@ GEM
     bootstrap (0.0.1)
     bootstrap-sass (2.3.1.0)
       sass (~> 3.2)
+    bootstrap-will_paginate (0.0.6)
+      will_paginate
     bourbon (3.1.1)
       sass (>= 3.2.0)
       thor
@@ -65,6 +67,7 @@ GEM
       activesupport (>= 3.2.0)
     childprocess (0.3.9)
       ffi (~> 1.0, >= 1.0.11)
+    client_side_validations (3.2.5)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -92,6 +95,8 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    faker (1.0.1)
+      i18n (~> 0.4)
     fastercsv (1.5.5)
     ffi (1.6.0-x86-mingw32)
     formtastic (2.2.1)
@@ -125,6 +130,7 @@ GEM
     multi_json (1.7.2)
     nokogiri (1.5.9-x86-mingw32)
     orm_adapter (0.4.0)
+    pdfkit (0.5.3)
     pg (0.12.2-x86-mingw32)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
@@ -199,6 +205,8 @@ GEM
     warden (1.2.1)
       rack (>= 1.0)
     websocket (1.0.7)
+    will_paginate (3.0.3)
+    wkhtmltopdf (0.1.2)
     xpath (0.1.4)
       nokogiri (~> 1.3)
 
@@ -211,13 +219,17 @@ DEPENDENCIES
   bcrypt-ruby (= 3.0.1)
   bootstrap
   bootstrap-sass (~> 2.3.1.0)
+  bootstrap-will_paginate
   capybara (= 1.1.2)
   carrierwave
+  client_side_validations
   coffee-rails (= 3.2.2)
   country-select
   cucumber-rails (= 1.2.1)
   database_cleaner (= 0.7.0)
+  faker (= 1.0.1)
   jquery-rails (= 2.0.2)
+  pdfkit
   pg (= 0.12.2)
   rails (= 3.2.13)
   rmagick
@@ -225,3 +237,5 @@ DEPENDENCIES
   sass-rails (~> 3.2)
   sqlite3 (= 1.3.5)
   uglifier (= 1.2.3)
+  will_paginate (= 3.0.3)
+  wkhtmltopdf

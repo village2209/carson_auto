@@ -1,5 +1,9 @@
 class CarsController < ApplicationController
 
+	def index
+		@cars = Car.paginate(page: params[:page], :per_page => 10, :order => 'year DESC')
+	end
+
 	def new
 		@car = Car.new
 	end

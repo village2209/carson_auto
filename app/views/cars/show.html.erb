@@ -1,4 +1,5 @@
 <div class="row">
+	<%= will_paginate %>
 	<h1>
 		<%= @car.id %>
 		<%= @car.model %>
@@ -7,4 +8,5 @@
 		<%= image_tag @car.image_url(:thumb).to_s %>
 		<%= @car.fuel_type %>
 	</h1>
+	<%= end %>
 </div>

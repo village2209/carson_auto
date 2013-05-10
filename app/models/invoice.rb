@@ -16,6 +16,7 @@ class Invoice < ActiveRecord::Base
   belongs_to :order
   belongs_to :ship_address
   has_many :invoice_lines
+  has_many :ordes
   
   attr_accessible :invoice_line, :invoice_total
 end

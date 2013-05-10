@@ -1,6 +1,6 @@
 <%= provide(:title, 'Cart Items') %>
 
-<div>
+<div class="row">
 	<table class="span4 table-striped table-bordered">
 		<% CartItem.find_each(:conditions => "cart_id = #{current_cart.id}") do |item| %>
 		<% Car.find_by_id("#{item.product_id}") do |car| %>
@@ -11,6 +11,9 @@
 		</tr>
 		<% end %>
 		<% end %>
+		<tr>
+			<td colspan="2"><%= link_to 'checkout', place_order_path %></td>
+		</tr>
 		<thead class="bold">
 				<td>Make</td><td>Price</td>
 		</thead>

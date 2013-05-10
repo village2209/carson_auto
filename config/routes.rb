@@ -12,6 +12,8 @@ CarsonAuto::Application.routes.draw do
   resources :payment_cards
   resources :carts
   resources :cart_items, only: [:create, :destroy]
+  resources :orders
+  resources :incoices
 
   resources :sessions, only: [:new, :create, :destroy]
 
@@ -39,12 +41,13 @@ CarsonAuto::Application.routes.draw do
   match '/add_cart', to: 'carts#create'
 
   match '/add_cart_item', to: 'cart_items#create'
-
   match '/show_cart_items', to: 'cart_items#index'
-
   match '/destroy_cart_item', to: 'cart_items#destroy'
  
+  match '/place_order', to: 'orders#create'
+  match '/order_history', to: 'orders#show'
 
+  match '/invoice', to: 'invoices#create'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

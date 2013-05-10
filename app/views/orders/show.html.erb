@@ -1,0 +1,18 @@
+<%= provide(:title, 'Order History') %>
+<%= render 'shared/side_bar' %>
+<div class="row">
+	<aside class="span4">
+		<table class="table table-striped">
+			<% current_user.orders.each do |order| %>
+			<tr>
+				<td><%= order.created_at.strftime("%d %B, %Y") %></td>
+			</tr>	
+			<% end %>
+			<thead>	
+					<td>Date</td>
+				
+			</thead>
+		</table>
+	</aside>
+
+</div>

@@ -7,6 +7,12 @@ gem 'carrierwave'
 gem 'bootstrap-sass', '~> 2.3.1.0'
 gem 'activeadmin'
 gem 'country-select'
+gem 'client_side_validations'
+gem 'pdfkit'
+gem 'wkhtmltopdf'
+gem 'will_paginate', '3.0.3'
+gem 'bootstrap-will_paginate'
+gem 'faker', '1.0.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

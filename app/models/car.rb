@@ -17,6 +17,8 @@
 #
 
 class Car < ActiveRecord::Base
-  attr_accessible :color, :fuel_type, :image, :make, :mileage, :model, :price, :transmission, :year
+  attr_accessible :color, :fuel_type, :image, :make, :mileage, :model, :price, :transmission, :year, :category, :engine
   mount_uploader :image, ImageUploader
+  has_many :invoice_lines
+  has_many :carts
 end
