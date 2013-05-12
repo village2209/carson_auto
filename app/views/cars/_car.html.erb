@@ -1,8 +1,16 @@
-<li  class="well">
-	<%= image_tag car.image_url(:thumb).to_s, class: "thumbnail" %>
-					<%= car.model %>
-					<%= car.year %>
-					<%= car.price %>
+<div  class="row well">
+	<aside class="pull-left">
+		<%= image_tag car.image_url(:thumb).to_s, class: "thumbnail" %>
+		<b><%= car.make + " " + car.engine + " " %><%= car.model %></b><br>
+		<%= link_to 'add to cart', add_cart_item_path(:product => { :product_id => car.id}) %>
+	</aside>
 					
-					<%= car.fuel_type %>
-</li>
+	<aside class="pull-left span4">		
+		<b><%= number_to_currency car.price, :unit => "R" %></b><br>
+		<%= car.year %><br>
+		<%= car.color %> <br>
+		<%= car.mileage + " km" %><br>
+		<%= car.transmission %><br>
+		<%= car.fuel_type %><br>
+	</aside>
+</div>

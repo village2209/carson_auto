@@ -1,3 +1,17 @@
+<%= provide(:title, 'Cars') %>
+
+<div class="tabbable">	
+	<ul class="nav nav-tabs">
+		<li><%= link_to "All cars", cars_path , class: "active"%></li>
+		<li><%= link_to "Bakkies", find_cars_path(:find => { :category => "bakkie"})%></li>
+		<li><%= link_to "Sports cars", find_cars_path(:find => { :category => "sports"}) %></li>
+		<li><%= link_to "4x4s", find_cars_path(:find => { :category => "4x4"}) %></li>
+		<li><%= link_to "Sedans", find_cars_path(:find => { :category => "sedan"}) %></li>
+	</ul>
+
+
+	
+</div>
 <div class="row">
 
 	<%= will_paginate %>

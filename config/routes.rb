@@ -49,6 +49,8 @@ CarsonAuto::Application.routes.draw do
 
   match '/invoice', to: 'invoices#create'
 
+  match '/find_cars', to: 'cars#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

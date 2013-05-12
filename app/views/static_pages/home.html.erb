@@ -1,15 +1,18 @@
 <% provide(:title, 'Home') %>
 <h1>Welcome to Carson Auto</h1>
 <p>
-	
-	<% Car.all.each do |car| %>
-	<div class="well">
-  		<%= image_tag car.image_url(:thumb).to_s, class: "thumbnail" %><br>
-  		<%= car.make %><br>
-  		<%= car.year %><br>
-  		<%= number_to_currency car.price, :unit => "R" %><br>
-  		<%= link_to 'add to cart', add_cart_item_path(:product => { :product_id => car.id}) %>
-  	</div>
-	<% end %>
+	<div class="row">
+    <h4>Latest additions to our products</h4>
+  	<% Car.find(:all, :order => "price desc", :limit => 3).each do |car| %>
+  	<div class="span4">
+    		<%= image_tag car.image_url(:thumb).to_s, class: "thumbnail" %><br>
+    		<%= car.make %><br>
+    		<%= car.year %><br>
+    		<%= number_to_currency car.price, :unit => "R" %><br>
+    		<%= link_to 'add to cart', add_cart_item_path(:product => { :product_id => car.id}) %>
+    	</div>     
+    <% end %>
+    <p>Find more <%= link_to 'cars', cars_path %></p>
+  </div> 
 
 </p>

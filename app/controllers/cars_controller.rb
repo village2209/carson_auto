@@ -1,7 +1,7 @@
 class CarsController < ApplicationController
 
 	def index
-		@cars = Car.paginate(page: params[:page], :per_page => 10, :order => 'year DESC')
+		@cars = Car.paginate(page: params[:page], :per_page => 10 ,:conditions => params[:find], :order => 'year DESC')
 	end
 
 	def new
@@ -9,7 +9,7 @@ class CarsController < ApplicationController
 	end
 
 	def show
-		@car = Car.find(params[:id])
+		@car = Car.find(:id)
 	end
 
 	def create
